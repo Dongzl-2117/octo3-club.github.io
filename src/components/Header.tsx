@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Menu, X, GraduationCap } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 export default function Header() {
@@ -21,7 +21,7 @@ export default function Header() {
           <Link href="/">
             <div className="flex items-center gap-2 cursor-pointer group">
               <h1 className="text-xl font-bold text-blue-600">
-                HKU CS Study Group
+                Octo3 Club
               </h1>
             </div>
           </Link>

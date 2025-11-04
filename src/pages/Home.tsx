@@ -18,10 +18,13 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
           <div className="text-center">
             <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-              HKU CS Study Group
+              Octo3 Club
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-              A collaborative platform for HKU Computer Science students to share knowledge, present research, and grow together.
+            <p className="text-lg sm:text-xl text-gray-600 mb-4 max-w-3xl mx-auto leading-relaxed">
+              A Collaborative Learning Platform
+            </p>
+            <p className="text-base text-gray-500 mb-12 max-w-2xl mx-auto">
+              Share knowledge, present research, and grow together
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-4">
