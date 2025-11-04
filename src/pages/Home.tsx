@@ -14,30 +14,30 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-indigo-700 to-purple-700">
+      <section className="relative overflow-hidden gradient-animated">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-40"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 sm:py-40">
-          <div className="text-center">
-            <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+          <div className="text-center animate-fadeIn">
+            <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight text-glow">
               Octo3 Club
             </h2>
-            <p className="text-xl sm:text-2xl text-blue-100 mb-4 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl sm:text-2xl text-blue-100 mb-4 max-w-3xl mx-auto leading-relaxed animate-slideUp">
               A Collaborative Learning Platform
             </p>
-            <p className="text-lg text-blue-200 mb-12 max-w-2xl mx-auto">
+            <p className="text-lg text-blue-200 mb-12 max-w-2xl mx-auto animate-slideUp" style={{animationDelay: '0.2s'}}>
               Share knowledge, present research, and grow together
             </p>
             
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <div className="flex flex-col sm:flex-row justify-center gap-4 animate-scaleIn" style={{animationDelay: '0.4s'}}>
               <Link href="/presentations">
-                <button className="group bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 flex items-center justify-center gap-2">
+                <button className="group bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold transition-smooth shadow-premium-lg hover:shadow-2xl hover:scale-105 flex items-center justify-center gap-2 glow-blue">
                   View Presentations
                   <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
               <Link href="/about">
-                <button className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300 border border-white/30 hover:border-white/50">
+                <button className="glass-strong text-white px-8 py-4 rounded-xl font-semibold transition-smooth hover:scale-105">
                   Learn More
                 </button>
               </Link>
@@ -63,8 +63,10 @@ export default function Home() {
       {/* What We Offer */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h3 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">What We Offer</h3>
+          <div className="text-center mb-20 animate-fadeIn">
+            <h3 className="text-4xl sm:text-5xl font-bold mb-6">
+              <span className="gradient-text-blue">What We Offer</span>
+            </h3>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               A carefully crafted learning and sharing platform for Computer Science students
             </p>
@@ -77,26 +79,30 @@ export default function Home() {
                 title: "Weekly Presentations",
                 description: "Regular knowledge sharing sessions where members present on various CS topics, research findings, and technical insights",
                 color: "from-blue-500 to-indigo-600",
+                delay: "0s"
               },
               {
                 icon: BookOpen,
                 title: "Curated Resources",
                 description: "Carefully selected collection of papers, articles, and learning materials to help you dive deep into various fields",
                 color: "from-purple-500 to-pink-600",
+                delay: "0.2s"
               },
               {
                 icon: Image,
                 title: "Event Gallery",
                 description: "Capturing memorable moments from our group activities, workshops, and gatherings as we grow together",
                 color: "from-green-500 to-teal-600",
+                delay: "0.4s"
               },
             ].map((item, index) => (
               <div
                 key={index}
-                className="group relative bg-white p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-gray-100 hover:border-transparent hover:-translate-y-3"
+                className="card-premium animate-slideUp"
+                style={{animationDelay: item.delay}}
               >
                 <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-5 rounded-3xl transition-opacity duration-500 from-blue-500 to-purple-600"></div>
-                <div className={`inline-flex p-5 rounded-2xl bg-gradient-to-br ${item.color} mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg`}>
+                <div className={`inline-flex p-5 rounded-2xl bg-gradient-to-br ${item.color} mb-6 shadow-premium animate-float`}>
                   <item.icon className="text-white" size={36} />
                 </div>
                 <h4 className="text-2xl font-bold mb-4 text-gray-900 group-hover:text-blue-600 transition-colors duration-300">{item.title}</h4>
@@ -113,13 +119,15 @@ export default function Home() {
       {upcomingPresentations.length > 0 && (
         <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-16 gap-4">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-16 gap-4 animate-slideInLeft">
               <div>
-                <h3 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-3">Upcoming Presentations</h3>
+                <h3 className="text-4xl sm:text-5xl font-bold mb-3">
+                  <span className="gradient-text-blue">Upcoming Presentations</span>
+                </h3>
                 <p className="text-xl text-gray-600">Exciting content you don't want to miss</p>
               </div>
               <Link href="/presentations">
-                <a className="group inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold text-lg cursor-pointer">
+                <a className="group inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold text-lg cursor-pointer transition-bounce">
                   View All
                   <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform" />
                 </a>
@@ -127,14 +135,15 @@ export default function Home() {
             </div>
             
             <div className="grid md:grid-cols-3 gap-10">
-              {upcomingPresentations.map((presentation) => (
+              {upcomingPresentations.map((presentation, index) => (
                 <div
                   key={presentation.id}
-                  className="group relative bg-white border-2 border-gray-200 rounded-3xl p-8 hover:shadow-2xl hover:border-blue-400 transition-all duration-500 hover:-translate-y-2"
+                  className="group relative bg-white border-2 border-gray-200 rounded-3xl p-8 shadow-premium hover:shadow-premium-lg transition-smooth hover:-translate-y-2 animate-scaleIn"
+                  style={{animationDelay: `${index * 0.2}s`}}
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50 opacity-0 group-hover:opacity-100 rounded-3xl transition-opacity duration-500"></div>
                   <div className="relative">
-                    <div className="flex items-center gap-2 text-sm text-blue-600 font-semibold mb-5 bg-blue-50 px-4 py-2 rounded-full w-fit">
+                    <div className="flex items-center gap-2 text-sm text-blue-600 font-semibold mb-5 glass px-4 py-2 rounded-full w-fit">
                       <Calendar size={16} />
                       <span>{new Date(presentation.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
                     </div>
@@ -143,7 +152,7 @@ export default function Home() {
                     </h4>
                     <p className="text-gray-600 mb-6 line-clamp-3 text-base leading-relaxed">{presentation.description}</p>
                     <div className="flex items-center gap-3 pt-5 border-t border-gray-200">
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-base font-bold shadow-md">
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-base font-bold shadow-premium">
                         {presentation.speaker.charAt(0)}
                       </div>
                       <span className="text-base text-gray-700 font-semibold">{presentation.speaker}</span>
