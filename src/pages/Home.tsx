@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Calendar, BookOpen, Image, ArrowRight, Users } from "lucide-react";
+import { Calendar, BookOpen, Image, ArrowRight } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import presentations from "../data/presentations.json";
@@ -52,41 +52,38 @@ export default function Home() {
             </h3>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {[
               {
                 icon: Calendar,
                 title: "Weekly Presentations",
                 description: "Regular knowledge sharing sessions where members present on various CS topics",
-              },
-              {
-                icon: Users,
-                title: "Discussion Forums",
-                description: "Engage in meaningful discussions about presentations and topics",
+                link: "/presentations",
               },
               {
                 icon: BookOpen,
                 title: "Resource Library",
                 description: "Curated collection of papers, articles, and learning materials",
+                link: "/resources",
               },
               {
                 icon: Image,
                 title: "Event Gallery",
                 description: "Photos and memories from our group activities and events",
+                link: "/gallery",
               },
             ].map((item, index) => (
-              <div
-                key={index}
-                className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-shadow"
-              >
-                <div className="inline-flex p-4 rounded-xl bg-blue-100 mb-5">
-                  <item.icon className="text-blue-600" size={32} />
+              <Link key={index} href={item.link}>
+                <div className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-shadow cursor-pointer">
+                  <div className="inline-flex p-4 rounded-xl bg-blue-100 mb-5">
+                    <item.icon className="text-blue-600" size={32} />
+                  </div>
+                  <h4 className="text-xl font-bold mb-3 text-gray-900">{item.title}</h4>
+                  <p className="text-gray-600 leading-relaxed">
+                    {item.description}
+                  </p>
                 </div>
-                <h4 className="text-xl font-bold mb-3 text-gray-900">{item.title}</h4>
-                <p className="text-gray-600 leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
