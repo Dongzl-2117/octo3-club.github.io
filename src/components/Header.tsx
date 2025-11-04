@@ -7,7 +7,7 @@ export default function Header() {
         <div className="flex justify-between items-center">
           <Link href="/">
             <h1 className="text-2xl font-bold text-blue-600 cursor-pointer hover:text-blue-700">
-              HKU CS Study Group
+              Octo3 Club
             </h1>
           </Link>
           <nav className="flex gap-6">

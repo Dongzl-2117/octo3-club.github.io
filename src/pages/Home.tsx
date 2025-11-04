@@ -16,9 +16,9 @@ export default function Home() {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-4">HKU CS Study Group</h2>
+          <h2 className="text-4xl font-bold mb-4">Octo3 Club</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            A collaborative platform for HKU Computer Science students to share knowledge, present
+            A collaborative platform for students to share knowledge, present
             research, and grow together.
           </p>
           <div className="flex justify-center gap-4">

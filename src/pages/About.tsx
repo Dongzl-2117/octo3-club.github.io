@@ -12,8 +12,8 @@ export default function About() {
         <div className="bg-white rounded-lg shadow-md p-8 mb-8">
           <h3 className="text-2xl font-semibold mb-4">Our Mission</h3>
           <p className="text-gray-700 leading-relaxed mb-4">
-            The HKU CS Study Group is a collaborative platform designed to foster knowledge sharing
-            and academic growth among Computer Science students at the University of Hong Kong. We
+            Octo3 Club is a collaborative platform designed to foster knowledge sharing
+            and academic growth among Computer Science students. We
             believe in the power of peer learning and collective intelligence.
           </p>
           <p className="text-gray-700 leading-relaxed">
@@ -60,7 +60,7 @@ export default function About() {
         <div className="bg-white rounded-lg shadow-md p-8">
           <h3 className="text-2xl font-semibold mb-4">Join Us</h3>
           <p className="text-gray-700 leading-relaxed mb-4">
-            We welcome all HKU Computer Science students who are passionate about learning and
+            We welcome all Computer Science students who are passionate about learning and
             sharing knowledge. Whether you're interested in algorithms, machine learning, web
             development, or any other CS topic, there's a place for you in our community.
           </p>

@@ -1,6 +1,6 @@
-# HKU CS Study Group - 静态网站版本
+# Octo3 Club - 静态网站版本
 
-这是 HKU CS Study Group 的静态网站版本，专为 GitHub Pages 部署而设计。
+这是 Octo3 Club 的静态网站版本，专为 GitHub Pages 部署而设计。
 
 ## 特性
 
